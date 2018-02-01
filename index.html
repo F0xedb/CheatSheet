@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="src/img/icons8-students-50.png">
+  <title>CheatSheet</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+<div id="app">
+  <nav>
+    <ul>
+	  <li class="disabled">C++</li>
+	  <li class="disabled">C#</li>
+	  <li class="disabled">JAVA</li>
+	  <li class="disabled">PY</li>
+	  
+	  <li class="disabled">ARD</li>
+	  <li class="disabled">SH</li>
+	  
+	  <li class="disabled">XML</li>
+	  <li class="disabled">WPF</li>
+	  <li class="disabled">JSON</li>
+	  
+	  <li class="disabled">DP</li>
+	  <li class="disabled">UE4</li>
+	  <li class="disabled">Unity</li>
+	  <li class="disabled">GL</li>
+	  
+	  <li class="disabled">GIT</li>
+	  
+	 
+	  
+	  <li class="disabled">MOBILE</li>
+	  <li v-on:click="page = 'US'">US</li>
+	  <li v-on:click="page = 'html'">HTML</li>
+      <li v-on:click="page = 'css'">CSS</li>
+      <li v-on:click="page = 'js'">JS</li> 
+      <li class="disabled">TS</li> 
+      <li class="disabled">SQL</li>
+      
+    </ul>
+  </nav>
+  <section v-show="page === 'cpp'">
+    <h1>C++</h1>
+    <div v-for="item in elements.cpp">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'DP'">
+    <h1>Design patterns</h1>
+    <div v-for="item in elements.DP">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'UE4'">
+    <h1>UE4 API</h1>
+    <div v-for="item in elements.UE4">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'CS'">
+    <h1>C#</h1>
+    <div v-for="item in elements.CS">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'Unity'">
+    <h1>Unity API</h1>
+    <div v-for="item in elements.UNITY">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'wpf'">
+    <h1>C# WPF</h1>
+    <div v-for="item in elements.wpf">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'Java'">
+    <h1>Java</h1>
+    <div v-for="item in elements.java">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'mobile'">
+    <h1>Android studio</h1>
+    <div v-for="item in elements.mobile">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'US'">
+    <h1>Usefull sites</h1>
+    <div v-for="item in elements.US">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-html">{{ item.content }}</code></pre>
+    </div>
+  </section>
+    
+  <section v-show="page === 'html'">
+    <h1>HTML</h1>
+    <div v-for="item in elements.html">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-html">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'css'">
+    <h1>CSS</h1>
+    <div v-for="item in elements.scss">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-scss">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <section v-show="page === 'js'">
+    <h1>JS</h1>
+    <div v-for="item in elements.js">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.info }}</p>
+      <pre><code class="lang-js">{{ item.content }}</code></pre>
+    </div>
+  </section>
+  <footer>
+    Cheat Sheet Made by {{ author }} 
+  </footer>
+</div>
+<script src="src/js/vue.min.js"></script>
+<script src="src/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-javascript.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-css.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-scss.min.js"></script>
+</body>
+</html>
